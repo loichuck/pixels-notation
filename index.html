@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://s1.lemde.fr/medias/web/css/fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html, body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            line-height: 1.4;
+            background: #f1f5f8;
+        }
+        .wrapper{
+            width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 5em 0;
+        }
+        h1, p{
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Grand titre</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <div class="pxl-notation">
+            <h2 class="pxl-title">Conclusion personnalisée</h2>
+            <div class="pxl-description">Ajustez ces critères selon l'importance que vous leur donnez</div>
+            <div class="pxl-notes">
+                <div class="pxl-criteria">
+                    <h3 class="pxl-bar-title">Prix</h3>
+                    <div class="pxl-bar" data-criteria="price" data-limit data-min="25" data-max="50"></div>
+                </div>
+                <div class="pxl-criteria">
+                    <h3 class="pxl-bar-title">Feu</h3>
+                    <div class="pxl-bar" data-criteria="fire" data-step="2"></div>
+                </div>
+                <div class="pxl-criteria">
+                    <h3 class="pxl-bar-title">Eau</h3>
+                    <div class="pxl-bar" data-criteria="water" data-step="3"></div>
+                </div>
+                <div class="pxl-criteria">
+                    <h3 class="pxl-bar-title">Electricité</h3>
+                    <div class="pxl-bar" data-criteria="electricity"></div>
+                </div>
+            </div>
+            <div class="pxl-products">
+                <div class="pxl-product" data-criteria-price="25" data-criteria-fire="25" data-criteria-water="25" data-criteria-electricity="80">
+                    <canvas width="120" height="120"></canvas>
+                    <h3 class="pxl-product-title">Pickatchu</h3>
+                    <p class="pxl-product-note"></p>
+                </div>
+                <div class="pxl-product" data-criteria-price="30" data-criteria-fire="25" data-criteria-water="82" data-criteria-electricity="50">
+                    <canvas width="120" height="120"></canvas>
+                    <h3 class="pxl-product-title">Carapuce</h3>
+                    <p class="pxl-product-note"></p>
+                </div>
+                <div class="pxl-product" data-criteria-price="40" data-criteria-fire="25" data-criteria-water="96" data-criteria-electricity="50">
+                    <canvas width="120" height="120"></canvas>
+                    <h3 class="pxl-product-title">Tortank</h3>
+                    <p class="pxl-product-note"></p>
+                </div>
+                <div class="pxl-product" data-criteria-price="50" data-criteria-fire="98" data-criteria-water="20" data-criteria-electricity="20">
+                    <canvas width="120" height="120"></canvas>
+                    <h3 class="pxl-product-title">Dracofeu</h3>
+                    <p class="pxl-product-note"></p>
+                </div>
+            </div>
+            <script src="notations.js"></script>
+            <script>
+                Notation.init("[data-criteria]", ".pxl-products", ".pxl-product", {usePriceLimit: true});
+            </script>
+        </div>
+    </div>
+</body>
+</html>
