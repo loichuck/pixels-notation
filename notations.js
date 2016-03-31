@@ -5,7 +5,9 @@
     var container;
 
     var options = {
-        usePriceLimit: false,
+        criteria: "[data-criteria]",
+        products: ".pxl-products",
+        product:  ".pxl-product",
         notation: 100
     };
 
@@ -43,13 +45,13 @@
         });
     }
 
-    function init(_criteria, _container, _products, _options){
+    function init(_options){
         if(typeof _options === 'object')
             extend(options, _options);
 
-        container = document.querySelector(_container);
-        forEach(document.querySelectorAll(_criteria), createCriteria);
-        forEach(document.querySelectorAll(_products), createProduct);
+        container = document.querySelector(options.container);
+        forEach(document.querySelectorAll(options.criteria), createCriteria);
+        forEach(document.querySelectorAll(options.products), createProduct);
 
         calculate();
         return Notation;
