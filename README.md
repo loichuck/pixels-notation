@@ -96,8 +96,8 @@ Les options suivantes sont disponibles et facultatives (ici les options par déf
 ```javascript
 Notation.init({
 	criteria: "[data-criteria]", // Selecteur des critères
-	products: ".pxl-products",   // Selecteur du contenant
-	product:  ".pxl-product",    // Selecteur des éléments
+	container: ".pxl-products",   // Selecteur du contenant
+	products:  ".pxl-product",    // Selecteur des éléments
     notation: 100                // Barème de notation
 });
 ```

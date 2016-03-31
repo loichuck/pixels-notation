@@ -6,8 +6,8 @@
 
     var options = {
         criteria: "[data-criteria]",
-        products: ".pxl-products",
-        product:  ".pxl-product",
+        container: ".pxl-products",
+        products:  ".pxl-product",
         notation: 100
     };
 
