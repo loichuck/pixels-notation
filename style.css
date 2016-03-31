@@ -90,6 +90,17 @@
     background: #06b586;
 }
 .pxl-product{
+    position: relative;
     display: inline-block;
     margin: -60px 30px;
+}
+.pxl-product img{
+    background: white;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    border-radius: 999px;
+    border: 5px solid white;
+    top: 25px;
+    left: 25px;
 }

@@ -85,10 +85,12 @@ Et la version avec un titre, l'affichage de la note, une jauge circulaire et le 
 
 ###Initialisation
 
-Pour initialiser le plugin ajouter le code **javascript** ci-dessous.
+Pour initialiser le plugin ajouter le code *javascript* ci-dessous.
 
-```javascript
-Notation.init();
+```html
+<script>
+    Notation.init();
+</script>
 ```
 
 Les options suivantes sont disponibles et facultatives (ici les options par défaut)
