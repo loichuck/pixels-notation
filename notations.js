@@ -41,6 +41,7 @@
             criteria: crits,
             elem: product,
             canvas: product.querySelector('canvas'),
+            value: 0,
             note: product.querySelector('.pxl-product-note')
         });
     }
@@ -81,9 +82,11 @@
                     }
                 }
             });
-            var pourcent = roundDecimal(note/criteriaLength, 10) || 0;
-            chart(product.canvas, pourcent/options.notation, "#06b586");
-            product.note.innerHTML = pourcent;
+            product.value = roundDecimal(note/criteriaLength, 10) || 0;
+            if(product.note)
+                product.note.innerHTML = product.value;
+            if(product.canvas)
+                chart(product.canvas, product.value/options.notation, "#06b586");
         });
 
         sort(products);
@@ -91,11 +94,11 @@
 
     function sort(prdtcs){
         prdtcs.sort(function(a, b){
-            return parseInt(b.note.innerHTML, 10) > parseInt(a.note.innerHTML, 10);
+            return b.value > a.value;
         });
 
         forEach(prdtcs, function(i, product){
-            if(parseInt(product.note.innerHTML, 10) !== 0){
+            if(product.value !== 0){
                 container.appendChild(product.elem);
             } else {
                 if(product.elem.parentNode === container)

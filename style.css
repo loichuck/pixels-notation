@@ -93,14 +93,20 @@
     position: relative;
     display: inline-block;
     margin: -60px 30px;
+    width: 120px;
+    vertical-align: top;
+}
+.pxl-product canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .pxl-product img{
+    position: relative;
     background: white;
     width: 70px;
     height: 70px;
-    position: absolute;
+    margin: 25px;
     border-radius: 999px;
     border: 5px solid white;
-    top: 25px;
-    left: 25px;
 }
